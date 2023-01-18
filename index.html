@@ -1,83 +1,20 @@
-<!DOCTYPEhtml>
- 
-　　<html>
- 
-　　<head>
- 
-　　<metacharset="UTF-8">
- 
-　　<title></title>
- 
-　　<script>
- 
-　　/**
- 
-　　*向Date类中添加获取当前时间的方法
- 
-　　*/
- 
-　　Date.prototype.currentTime=function(){
- 
-　　varyear=this.getFullYear();
- 
-　　varmonth=this.getMonth()+1;
- 
-　　varday=this.getDate();
- 
-　　varweek=this.getDay();
- 
-　　week="星期"+"日一二三四五六".charAt(week);
- 
-　　month=month<10?"0"+month:month;
- 
-　　day=day<10?"0"+day:day;
- 
-　　varhour=this.getHours();
- 
-　　varsecond=this.getSeconds();
- 
-　　varminute=this.getMinutes();
- 
-　　hour=hour<10?"0"+hour:hour;
- 
-　　second=second<10?"0"+second:second;
- 
-　　minute=minute<10?"0"+minute:minute;
- 
-　　returnyear+"-"+month+"-"+day+""+week+""+hour+":"+minute+":"+second;
- 
-　　}
- 
-　　functionshowTime(){
- 
-　　vartime=newDate().currentTime();
- 
-　　document.getElementById("show").innerHTML=time;
- 
-　　}
- 
-　　functionsetTime(){
- 
-　　showTime();
- 
-　　setInterval("showTime()",1000);
- 
-　　}
- 
-　　window.onload=function(){
- 
-　　setTime();
- 
-　　}
- 
-　　</script>
- 
-　　</head>
- 
-　　<body>
- 
-　　<spanid="show"></span>
- 
-　　</body>
- 
-　　</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- 其中5是指每隔5s刷新一次页面 
+	<meta http-equiv="refresh" content="5">-->
+	<title>刷新</title>
+	<script type="text/javascript">
+		function myrefresh(){
+			window.location.reload();
+		}
+		//指定1s刷新一次
+		setTimeout('myrefresh()',1000);
+	</script> 
+</head>
+<body>
+	<h1>大大大大 页面</h1>
+</body>
+</html>
